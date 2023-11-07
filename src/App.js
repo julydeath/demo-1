@@ -1,18 +1,20 @@
 import "./App.css";
 import { useState } from "react";
+import Counter from "./components/Counter";
+import Todo from "./components/Todo";
 
 function App() {
-  const [number, setNumber] = useState(0);
-
-  const handleClick = () => {
-    setNumber(number + 1);
-  };
+  // const [input, setInput] = useState(0);
 
   return (
     <div>
-      <h1 className="demo">Demo one</h1>
-      <h4>{number}</h4>
-      <button onClick={() => setNumber(number + 1)}>ADD</button>
+      {/* <input
+        value={input}
+        type="number"
+        onChange={(e) => setInput(e.target.value)}
+      /> */}
+      <Counter />
+      <Todo />
     </div>
   );
 }
